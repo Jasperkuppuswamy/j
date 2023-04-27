@@ -1,0 +1,142 @@
+
+# Create a matrix
+my_matrix <- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+
+# Print the matrix
+my_matrix
+
+# Find the transpose of the matrix
+transpose_matrix <- t(my_matrix)
+
+# Print the transpose matrix
+transpose_matrix
+fib=function(n){
+  a=0
+  b=1
+  cat(a,b,sep=" ")
+  for(i in 3:n){
+    c=a+b
+    cat(c,sep=" ")
+    a=b
+    b=c
+  
+}}
+
+fib <- function(n){
+  a = 0
+  b = 1
+  cat(a, b, sep = " ")
+  for(i in 3:n){
+    c = a + b
+    cat(c, sep = " ")
+    a = b
+    b = c
+  }
+}
+
+# Call the fib function to generate the first 10 Fibonacci numbers
+fib(10)
+print_fibonacci <- function(n) {
+  if (n <= 0) {
+    cat("Invalid input") # handle invalid input
+  } else {
+    # initialize the sequence with the first two terms
+    a <- 0
+    b <- 1
+    cat(a, b, sep = " ")
+    
+    # generate subsequent terms using a loop and print them
+    for (i in 3:n) {
+      c <- a + b
+      cat(c, sep = " ")
+      a <- b
+      b <- c
+    }
+  }
+}
+
+3. Write aR program that iterates integers from 1 to 100.
+But for multiples of three print "Fizz" instead of the number
+and for multiples of five print "Buzz". For numbers multiples
+of both three and five print "FizzBuzz"
+
+for(i in 1:100){
+  if(i%%3==0&i%%5==0){
+    cat("fizzbuzz")
+  }else if(i%%3==0){
+    cat("fizz")
+  }else if(i%%5==0){
+    cat("fizz")
+  }
+}
+
+for(i in 1:5){
+  for(i in 1:i){
+    cat(" * ")
+  }
+  cat("\n")
+}
+gcd <- function(a, b) {
+  while (b != 0) {
+    r <- a %% b
+    a <- b
+    b <- r
+  }
+  return(a)
+}
+
+
+# Get input from user
+potato_price <- as.numeric(readline("Enter price of potato: "))
+tomato_price <- as.numeric(readline("Enter price of tomato: "))
+onion_price <- as.numeric(readline("Enter price of onion: "))
+
+# Calculate quantities to purchase based on conditions
+potato_qty <- ifelse(potato_price <= 20, 5, 1)
+tomato_qty <- ifelse(tomato_price <= 40, 2, 1)
+onion_qty <- ifelse(onion_price <= 100, 2, 1)
+
+# Display the final quantities to purchase
+cat("Purchase", potato_qty, "kg of potato\n")
+cat("Purchase", tomato_qty, "kg of tomato\n")
+cat("Purchase", onion_qty, "kg of onion\n")
+7. Write a program using user defined function to check whether a given number is prime or not
+{isprime=function(n){ 
+  count=0
+  for(i in 1:n){
+    if(n%%i==0){
+      count=count+1}}
+  if(count==2){
+    print(paste(n,"is prime"))
+  } else{
+      print(paste(n,"is not prime"))
+  }}
+  n=as.integer(readline(prompt="enter a number"))
+  isprime(n)}
+8. Find area of a circle using user defined function
+{area=function(r){
+  return (pi*r*r)}
+r=as.integer(readline(prompt="enter radius"))
+print(paste("area of circle=",area(r)))                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+
+a <- as.numeric(readline("Enter the first number: "))
+b <- as.numeric(readline("Enter the second number: "))
+ch <- readline("Enter the operator (1, 2, 3, 4, 5): ")
+
+res <- switch(ch,
+              '1' = paste("sum=", a+b),
+              '2' = paste("diff=", a-b),
+              '3' = paste("prod=", a*b),
+              '4' = paste("quo=", a/b),
+              '5' = paste("mod=", a%%b))
+
+print(res)
+
+library(stringr)
+s="A B C A B"
+l=strsplit(s,split=" ")
+print(l)
+for (i in l){
+  print(paste("the string",i,"occurs",str_count(s,i)))}
